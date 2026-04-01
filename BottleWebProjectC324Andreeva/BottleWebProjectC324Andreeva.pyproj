@@ -30,6 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="myform.py" />
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
