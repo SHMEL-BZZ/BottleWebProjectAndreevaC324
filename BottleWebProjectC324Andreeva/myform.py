@@ -46,5 +46,6 @@ def my_form():
     
     from datetime import datetime
     current_date = datetime.now().strftime("%Y-%m-%d")
+
     
     return f"Thanks, {username}! The answer will be sent to the mail {mail}. Access Date: {current_date}"
