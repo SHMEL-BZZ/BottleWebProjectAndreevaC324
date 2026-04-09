@@ -2,14 +2,21 @@ from bottle import post, request
 import re
 from datetime import datetime
 
+import pdb
+
+user_questions = {}
+
 @post('/home', method='post')
 def my_form():
     mail = request.forms.get('ADRESS')
     question = request.forms.get('QUEST')
     username = request.forms.get('USERNAME', 'User')
+
+    user_questions[mail] = question
+    pdb.set_trace()
     
-    if not mail or not question:
-        return "Error: Please fill in all fields (email and question)."
+    if not mail or not question or not username:
+        return "Error: Please fill in all fields (email, question and username)."
     
     is_valid = True
     
