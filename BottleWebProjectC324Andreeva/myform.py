@@ -12,7 +12,7 @@ def my_form():
     question = request.forms.get('QUEST')
     username = request.forms.get('USERNAME', 'User')
 
-    user_questions[mail] = question
+    user_questions[mail] = [username, question]
     pdb.set_trace()
     
     if not mail or not question or not username:
